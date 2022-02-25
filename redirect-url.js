@@ -11,7 +11,13 @@
 
 (function() {
     'use strict';
+     function htmlDecode(input) {
+        var doc = new DOMParser().parseFromString(input, 'text/html');
+        return doc.documentElement.textContent;
+      }
+
     if(window.location.href.match(/^https:\/\/weixin110.qq.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi/)){
-        document.getElementsByClassName('weui-btn weui-btn_default')[0].click();
+      // document.getElementsByClassName('weui-btn weui-btn_default')[0].click();
+      window.location.href=htmlDecode(cgiData.url);
     }
 })();
