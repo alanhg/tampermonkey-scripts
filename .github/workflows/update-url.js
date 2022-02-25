@@ -14,7 +14,7 @@ function main() {
   const urlListStr = url.map(item => `- [${item}](${baseRawUrl}${item})`).join('\n');
   const readmeFile = targetFolder + '/README.md';
   let readmeContent = fs.readFileSync(readmeFile, 'utf8');
-  const newReadmeContent = readmeContent.replace(/(?<=<!-- start -->)(\s|\S)+(?=<!-- end -->)/, '\n' + urlListStr + '\n')
+  const newReadmeContent = readmeContent.replace(/(?<=<!-- start -->)(\s|\S)+(?=<!-- end -->)/, '\n' + urlListStr + '\n');
   fs.writeFileSync(readmeFile, newReadmeContent);
 }
 
