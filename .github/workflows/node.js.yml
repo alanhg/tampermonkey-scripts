@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Update URL
-      run: ｜
+      run: |
         node .github/workflows/update-url.js
         git config --global user.email "alan@1991421.cn"
         git config --global user.name "GitHub Bot"
