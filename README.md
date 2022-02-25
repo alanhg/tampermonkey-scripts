@@ -4,6 +4,11 @@
 油猴脚本
 
 ## 脚本安装
+访问`chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils`，拷贝脚本地址，进行安装
+![](./screenshot.jpg)
+
+## 脚本地址
 
 <!-- start -->
 <!-- end -->
+
