@@ -3,7 +3,7 @@
 ## 脚本地址
 
 <!-- start -->
-1111
+- [redirect-url.js](https://raw.githubusercontent.com/alanhg/tampermonkey-scripts/main/redirect-url.js)
 <!-- end -->
 
 ## 脚本安装
