@@ -10,14 +10,20 @@
 // @run-at document-end
 // ==/UserScript==
 
-(function() {
-    'use strict';
-     function htmlDecode(input) {
-        var doc = new DOMParser().parseFromString(input, 'text/html');
-        return doc.documentElement.textContent;
-      }
+(function () {
+  'use strict';
+  function htmlDecode(input) {
+    var doc = new DOMParser().parseFromString(input, 'text/html');
+    return doc.documentElement.textContent;
+  }
 
-    if(window.location.href.match(/^https:\/\/weixin110.qq.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi/)){
-      window.location.href=htmlDecode(cgiData.url);
+  if (
+    window.location.href.match(
+      /^https:\/\/weixin110.qq.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi/
+    )
+  ) {
+    if (cgiData.url) {
+      window.location.href = htmlDecode(cgiData.url);
     }
+  }
 })();
